@@ -194,3 +194,58 @@ f) La subida de archivos es cíclica y después de hacer una tiene que visualiza
 lista de archivos subida por el usuario hasta ese momento
 
 [Formulario para subir fotografías](./08-subir-fotografias.php)
+
+`9. Búsqueda y filtrado de vehículos. Crea un formulario HTML que permita a un usuario buscar vehículos de acuerdo con ciertos criterios y procesar un archivo CSV para mostrar los resultados correspondientes.`
+
+a) Formulario de búsqueda:
+
+-   El formulario debe permitir al usuario introducir su correo electro
+
+| Campo              | Descripción                                                                                      | Tipo                  | Validación                                        |
+|--------------------|--------------------------------------------------------------------------------------------------|-----------------------|---------------------------------------------------|
+| **Correo electrónico** | Permite al usuario ingresar su correo electrónico.                                               | **Email**             | Debe ser una dirección de correo válida.          |
+| **Tipo de vehículo**  | Permite al usuario seleccionar el tipo de vehículo. Opciones: "Turismo", "Furgoneta".             | **Grupo de botones**     | Debe seleccionar una opción válida.               |
+| **Marca del vehículo**| Permite al usuario seleccionar la marca del vehículo. Opciones: "Fiat", "Opel", "Mercedes".      | **Lista de selección única** | Debe seleccionar una opción válida.               |
+| **Antigüedad**        | Permite al usuario ingresar la antigüedad del vehículo (valor numérico entre 1 y 5).             | **Número**            | El valor debe estar entre 1 y 5.                  |
+| **ITV**               | Permite al usuario marcar si el vehículo tiene ITV.                                             | **Checkbox**          | Si está marcado, el vehículo tiene ITV, de lo contrario no. |
+| **Archivo CSV**       | Permite al usuario subir un archivo CSV con los datos de los vehículos. Debe ser de tipo `text/csv` y no superar los 200KB. | **File input**        | Debe ser un archivo CSV válido.                   |
+
+b) Validación de los datos:
+
+-   El **correo electrónico** debe ser válido.
+-   El **tipo de vehículo** debe ser uno de los disponibles en el formulario.
+-   La **marca** seleccionada debe ser una de las opciones disponibles.
+-   La **antigüedad** debe ser un número entre 1 y 5.
+-   El archivo subido debe ser de tipo CSV y debe estar dentro del límite de tamaño (200KB).
+
+c) Procesamiento del archivo CSV:
+
+-   El archivo CSV debe ser procesado para extrar la información de los vehículos.
+-   El archivo debe contener las siguientes columnas: **Tipo, Marca, Antigüedad y ITV**.
+-   El archivo debe ser validado para asegurarse de que es un archivo CSV válido (en cuanto
+    a extensión y tipo MIME).
+
+d) Filtrado de datos:
+
+-   Una vez procesado el archivo CSV, los datos deben ser filtrados según los parámetros de búsqueda proporcionados por el usuario en el formulario.
+
+-   Si hay vehículos que coinciden con los parámetros de búsqueda (tipo, marca, antigüedad, ITV), se deben mostrar en una tabla. Si no hay coincidencias, se debe mostrar un mensaje indicando que no se encontraron vehículos con esos parámetros..
+
+e) Errores:
+
+-   Si algún dato no es válido (por ejemplo, un correo electrónico incorrecto o un archivo CSV con un formato no permitido), se deben mostrar los errores correspondientes en pantalla.
+
+**Requerimiento:**
+
+-   El formulario debe estar bien estructurado y presentar los campos correctamente.
+-   Se debe validar tanto en el servidor (con PHP) como en el lado del cliente.
+-   El archivo CSV debe ser procesado correctamente, y los datos deben ser mostrados en una tabla si cumplen con los criterios de búsqueda.
+
+**Salida esperada:**
+
+-   Si no hay errores en el formulario ni en el archivo CSV, se debe mostrar una tabla con los resultados filtrados.
+-   Si hay errores, deben mostrarse los mensajes de error correspondientes y el formulario debe permitir corregir los datos ingresados.
+
+[Solución ejercicio](./09-busqueda-coches/ejercicio-09.php)
+
+[Archivo CSV](./09-busqueda-coches/vehiculos.csv)
