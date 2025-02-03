@@ -1,6 +1,6 @@
 <?php
     //  Ruta donde se almacenarán las tarjetas de desempleo
-    define("RUTA_TARJETAS", $_SERVER['DOCUMENT_ROOT'] . "/tema-2/repasoExamen/10-formacion/tarjetas/");
+    define("RUTA_TARJETAS", $_SERVER['DOCUMENT_ROOT'] . "/tema-2/repasoExamen/10-cursos/tarjetas/");
 
     //  Funciones auxiliares de la página
     require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/funciones.php");
