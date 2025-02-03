@@ -71,7 +71,7 @@ e) Los campos del formulario son:
 | **Bordes rellenos**      | Checkbox                 |                                                      |
 | **Nº de pizzas**         | Número                   | Entre 1 y 5                                           |
 
-[Pedido pizzería](./03-pizzeria.php)
+[Pedido pizzería](./03-pizzeria/03-pizzeria.php)
 
 `4. Crear un script para gestionar la configuración de un coche nuevo en el que se tiene que elegir un modelo y una serie de características:`
 
@@ -249,3 +249,25 @@ e) Errores:
 [Solución ejercicio](./09-busqueda-coches/ejercicio-09.php)
 
 [Archivo CSV](./09-busqueda-coches/vehiculos.csv)
+
+`10. Crear un script PHP para gestionar la inscripción en cursos de formación profesional.`
+
+a) Crear un formulario para recoger los datos del solicitante y generar una respuesta con todos los detalles de la inscripción, incluyendo los cursos seleccionados, el número de clases presenciales y el presupuesto total.
+
+b) Si el solicitante se encuentra en situación de desempleo, deberá adjuntar un documento acreditativo en formato PDF para acceder a un descuento del 10% en el precio total.
+
+c) Los campos del formulario son:
+
+| Campo                   | Descripción                                                           | Tipo                    | Validación                                           |
+|-------------------------|---------------------------------------------------------------------|-------------------------|------------------------------------------------------|
+| **Email**               | Permite al usuario ingresar su correo electrónico.                 | **Email**               | Debe ser una dirección de correo válida.            |
+| **Cursos**              | Permite seleccionar múltiples cursos.                              | **Checkbox (múltiple)** | Debe seleccionar al menos un curso.                 |
+| **Nº Clases Presenciales** | Número de clases presenciales entre 5 y 10.                      | **Número**              | Debe ser un número entre 5 y 10.                    |
+| **Situación de desempleo** | Indica si el usuario está en situación de desempleo.              | **Checkbox**            | Si se marca, se requiere subir la tarjeta de desempleo. |
+| **Tarjeta de desempleo** | Archivo que acredita la situación de desempleo (solo si aplica).   | **Archivo (PDF)**       | Debe ser un archivo PDF válido.                     |
+
+d) Una vez enviado el formulario, se generará una tabla con los datos del solicitante y un desglose del presupuesto total, incluyendo el descuento si corresponde.
+
+e) Si el solicitante ha subido correctamente la tarjeta de desempleo, el sistema almacenará el archivo en una carpeta específica del servidor bajo el nombre del correo electrónico del usuario.
+
+[Solución ejercicio Examen](./)
