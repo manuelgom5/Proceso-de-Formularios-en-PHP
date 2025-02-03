@@ -270,4 +270,4 @@ d) Una vez enviado el formulario, se generará una tabla con los datos del solic
 
 e) Si el solicitante ha subido correctamente la tarjeta de desempleo, el sistema almacenará el archivo en una carpeta específica del servidor bajo el nombre del correo electrónico del usuario.
 
-[Solución ejercicio Examen](./)
+[Solución ejercicio Examen](./10-cursos/ejercicio-10.php)
