@@ -258,13 +258,17 @@ b) Si el solicitante se encuentra en situación de desempleo, deberá adjuntar u
 
 c) Los campos del formulario son:
 
-| Campo                   | Descripción                                                           | Tipo                    | Validación                                           |
-|-------------------------|---------------------------------------------------------------------|-------------------------|------------------------------------------------------|
-| **Email**               | Permite al usuario ingresar su correo electrónico.                 | **Email**               | Debe ser una dirección de correo válida.            |
-| **Cursos**              | Permite seleccionar múltiples cursos.                              | **Checkbox (múltiple)** | Debe seleccionar al menos un curso.                 |
-| **Nº Clases Presenciales** | Número de clases presenciales entre 5 y 10.                      | **Número**              | Debe ser un número entre 5 y 10.                    |
-| **Situación de desempleo** | Indica si el usuario está en situación de desempleo.              | **Checkbox**            | Si se marca, se requiere subir la tarjeta de desempleo. |
-| **Tarjeta de desempleo** | Archivo que acredita la situación de desempleo (solo si aplica).   | **Archivo (PDF)**       | Debe ser un archivo PDF válido.                     |
+| Campo                     | Descripción                                                           | Tipo                    | Validación                                           |
+|---------------------------|---------------------------------------------------------------------|-------------------------|------------------------------------------------------|
+| **Email**                  | Permite al usuario ingresar su correo electrónico.                 | **Email**               | Debe ser una dirección de correo válida.            |
+| **Cursos**                 | Permite seleccionar múltiples cursos.                              | **Checkbox (múltiple)** | Debe seleccionar al menos un curso.                 |
+| **Curso: Ofimática**       | Curso relacionado con herramientas de oficina.                      | **Checkbox**            | Precio: 100€                                         |
+| **Curso: Programación**    | Curso sobre desarrollo de software.                                 | **Checkbox**            | Precio: 200€                                         |
+| **Curso: Reparación de ordenadores** | Curso de reparación y mantenimiento de equipos informáticos. | **Checkbox**            | Precio: 150€                                         |
+| **Nº Clases Presenciales** | Número de clases presenciales entre 5 y 10.                        | **Número**              | Debe ser un número entre 5 y 10.                    |
+| **Precio por clase**       | El precio por clase presencial.                                     | **Número**              | 10€ por clase                                        |
+| **Situación de desempleo** | Indica si el usuario está en situación de desempleo.                | **Checkbox**            | Si se marca, se requiere subir la tarjeta de desempleo. |
+| **Tarjeta de desempleo**   | Archivo que acredita la situación de desempleo (solo si aplica).    | **Archivo (PDF)**       | Debe ser un archivo PDF válido.                     |
 
 d) Una vez enviado el formulario, se generará una tabla con los datos del solicitante y un desglose del presupuesto total, incluyendo el descuento si corresponde.
 
